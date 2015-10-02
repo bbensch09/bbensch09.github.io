@@ -6,8 +6,8 @@
 </head>
 
 <main>
-  <h1 style="align:center">Blogging from the Bensch</h1>
-  <h2 style="align:center">Documenting Brian's journey as a developer</h2>
+  <h1 style="margin: auto; color: blue">Blogging from the Bensch</h1>
+  <h2 style="margin: auto; color: blue">Documenting Brian's journey as a developer</h2>
   <h4>October 1st, 2015</h4>
 
   <section>
@@ -31,7 +31,7 @@
     First, a central principle of version control is that for any given project, there should always be one "master" branch of the project. The master branch considered is always bug-free (or at least the most bug-free) and considered the most perfect version. In order to assure that it remains the best version, a universal best practice is that collaborators should never make changes to the master branch directly. Similarly, its is a nearly universal best practice to store the master branch in the cloud (i.e. on the web), usually by using the web platform GitHub. If the master version wasn't stored online (i.e. if it just sat on my local hard drive), collaborators whould have to email me and ask me to send it to them before they could begin working on their contributions. With the master branch stored in GitHub, there is always one source of truth that all collaborators can access and know that they have the most up to date version. Note that GitHub is not the only place you can store your master branch. Within corporations, it is common to have a private cloud-based hub similar to GitHub which serves the same function, but for the sake of protecting their proprietary code, is only accessible by company employees. When a developer wants to do work to improve the project, they start by making a clone of the master branch on their local computers. This clone is generally considered a "feature branch", and the developer can make any changes they want, knowing that they won't accidentally ruin master if they save a draft of their work. While working on the feature branch, the developer can save their work in as many smaller chunks as they want, and we call those chunks "commits". Each commit contains a short messaging summarizing the changes that were made, to facilitate the rest of the team understanding what types of changes were made when during a code review, without having to read every single line of code. When the developer's work on the feature branch is finished, they propose a merger of their feature branch to the master branch. They do this by pushing their local feature-branch into GitHub and creating a pull request, which generally includes a prompt for their teammates to review the proposed changes give an approval before the merge into master can be made. Finally, as an extra fail safe, if an undetected a bug appears after the merge, GitHub systematically stores and tracks every commit and merge, so it takes only a few clicks to revert back to the previous version.
       </p>
     <p>
-       While long-winded, that is my attempat at a brief introduction to version control. If you have questions or comments, please by all means share them below.
+       While long-winded, that is my attempat at a brief introduction to version control. If you have questions or comments, please by all means share them below. Slash don't share them below yet, since I haven't figured out how to enable comments...(stay tuned, maybe next week!)
     </p>
 
       <!-- copy and paste as many sections as you want to add paragraphs -->
