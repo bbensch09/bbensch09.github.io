@@ -1,0 +1,19 @@
+@bbcs-primary:3a3b39;
+@bbcs-accent:cc0000;
+
+.header {
+  width:100%;
+  /*background-color:#3a3b39;*/
+  opacity: .8;
+  background-color:@bbcs-primary;
+}
+.bb-c-pr{
+  color:#cc0000;
+}
+nav ul li {
+    display: inline;
+}
+footer ul li {
+    text-align: center;
+    display: inline;
+}
