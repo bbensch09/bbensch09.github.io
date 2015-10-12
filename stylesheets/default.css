@@ -1,0 +1,75 @@
+/*@bbcs-primary:3a3b39;
+@bbcs-accent:cc0000;*/
+
+/*---CORE ELEMENT TYPES---*/
+a {color:blue;}
+a:hover {color:green;}
+/*---COLORS & BACKGROUND---*/
+.bgc-2{background-color: #3a3b39;}
+.bgc-1{background-color: #cc0000;}
+.bg-n { background: none; }
+.bgc-w { background-color: white; }
+.bgc-b { background-color: black; }
+.bgc-t { background-color: transparent;
+.c-1{color:#cc0000;}
+.c-2{color:#3a3b39;}
+.op-2{opacity: .2}
+.op-4{opacity: .4}
+.op-6{opacity: .6}
+.op-8{opacity: .8}
+/*-FONT STYLES--*/
+.fs-n {  font-style: normal; }
+.fs-i {  font-style: italic; }
+.fz-xs { font-size: .5em; }
+.fz-sm { font-size: .75em; }
+.fz-df { font-size: 1em; }
+.fz-lg { font-size: 1.5em; }
+.fz-xl { font-size: 2em; }
+/*---POSITIONING---*/
+.fl-r {float:right;}
+.fl-l {float:left;}
+.cl-b {clear:both;}
+/*---Margins & Padding---*/
+.m-a {   margin: auto; }
+.mt-a {  margin-top: auto; }
+.mr-a {  margin-right: auto; }
+.mb-a {  margin-bottom: auto; }
+.ml-a {  margin-left: auto; }
+.mtb-a {
+  margin-top: auto;
+  margin-bottom: auto;}
+.mlr-a {
+  margin-left: auto;
+  margin-right: auto;}
+.va-t {  vertical-align: top; }
+.va-m {  vertical-align: middle; }
+.va-bl { vertical-align: baseline; }
+.va-b {  vertical-align: bottom; }
+.ta-l { text-align: left;}
+.ta-r { text-align: right;}
+.ta-c {  text-align: center; }
+.ta-j {  text-align: justify; }
+.td-n { text-decoration: none; }
+.td-u { text-decoration: underline; }
+.td-l { text-decoration: line-through; }
+.tt-u { text-transform: uppercase; }
+.tt-n { text-transform: none; }
+.tt-c { text-transform: capitalize; }
+.tt-l { text-transform: lowercase; }
+.lh-1 { line-height: 1; }
+.lh-2 { line-height: 2; }
+/*---Common Image Sizes---*/
+.img-s{height:5em;}
+.img-m{height:10em;}
+.img=l{height:15em;}
+.img-xl{height:20em;}
+
+.header {
+  width:100%;
+.nav ul li {
+    display: inline;
+}
+footer ul li {
+    text-align: center;
+    display: inline;
+}
