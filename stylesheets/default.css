@@ -36,6 +36,10 @@ p {padding: 2px 2px 2px 2px;}
 .d-n {  display: none; }
 .d-i {  display: inline; }
 .d-ib { display: inline-block; }
+.ov-h { overflow: hidden; }
+.ov-v { overflow: visible; }
+.ov-s { overflow: scroll; }
+.ov-a { overflow: auto; }
 .col-2{width:16.6%;}
 .col-3{width:25%;}
 .col-4{width:33.3%;}
