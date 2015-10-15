@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-    <title> Blog Post Title </title>
+    <title> CSS Debate: Classes vs. IDs </title>
   </head>
 
 <body>
@@ -25,21 +25,42 @@
             <li> <a href="../blog/about-me.html" > About Me </a> </li>
         </ul>
       </nav>
-    <section>
+    <article>
+      <div class="blog-section">
+        <p>
+          The past two weeks at Dev Bootcamp Phase 0, we've been focusing on the core nuts and bults of web development - HMTL and CSS. Everyone has heard of HTML (even my mother), it's the universal file format for viewing content on the web. CSS is less well known, but arguably more important and far more complex than HTML. While HTML is where the content (core text, images, and structure) of a website is built, CSS determines how that content actually looks to the user. CSS stands for Cascading Style Sheets, and will be the topic of today's blog post.
+        </p>
+        <p>
+          Before diving into the meet of this CSS debate, I'd like to share on a high-level how powerful CSS is. Below we see three different screenshots of the web page <a href="http://www.csszengarden.com/"> www.csszengarden.com </a>. They look pretty different, but guess what? They are all the exact same HTML! Each one simply has a different CSS stylesheet applied to it.
+        </p>
+        <section>
+          <img src="../imgs/csszengarden1.png"  class="css-images">
+          <img src="../imgs/csszengarden2.png"  class="css-images">
+          <img src="../imgs/csszengarden3.png"  class="css-images">
+        </section>
+        <p class="cl-b">
+          As you can see, the same exact web page, with different CSS, produces a completely different experence. Furthermore, because CSS files live separate from the HTML, they can be linked to as many pages in your website as you like. Meaning if Jeff Bezo's at Amazon decides tomorrow that he wants to change the colors on the "Add to cart" buttons, it doesn't matter than Amazon has over 200 million unique product pages. As long as they all refer to the same stylesheet, you only have to make the change once
+        </p>
+        <section>
+          <img src="../imgs/amazon-normal.png"  class="css-images">
+          <img src="../imgs/amazon-fucsia.png"  class="css-images">
+        </section>
 
-    <section>
-      <div class="blog section">
-          <p>  TEXT </p>
-
-    <p> <img src="../imgs/island_foxes.jpg" align="right" height=250px>
-For this  week, my DBC instructor has prompted us to consider the three questions below while introducing the concept of version control to beginner developers. I hope you enjoy.
-      <ul>
-        <li>What are the best practices associated with using classes vs. ids? </li>
-
-      </ul>
-    </p>
+        <p>
+          At its core, CSS enables developers to live by a core maxim we've learned at Dev Bootcamp called DRY - Don't Repeat Yourself. We are lazy, and repeating the same line of code is a miserable chore. With CSS, we don't have to. As long as we write our CSS <em> efficiently </em>. Which brings us to the core topic of this blog post. Which is the better type of selector to use: classes? Or IDs?
+        </p>
+        <p>
+          Classes and IDs are very similar in how they're used. Within an HTML element, we simply add a property for class="class-name" or id="id-name", and we're then able to use those name's as selectors in our CSS sheet. For example, if you wanted to apply some styling to your Amazon add-to-cart button, you could technically choose either classes or ids, and end up with  HML and CSS that looks something like the below. Both would work fine and generate the same result.
+        </p>
+        <img src="../imgs/class-vs-id-example.png" class="css-images">
+        <p>
+          However, two large limitation exists for IDs. First, they can only be used ONCE in a given web page. ID values must be unique, and once the CSS matches to an element, the rule is no longer used again. This throws a pretty big wrench into our desire to not repeat ourselves. What if we want to put multiple add-to-cart buttons on the same page? Then we'd have to use the class selector. Second, an HTML element can only have one ID value assigned to it, where as an element can have as many classes as we want. This therefore means we can assign semantically intuitive class values to elements that make our HTML very readable, but still entirely scalable when we want to change styles later. Instead of having the class example above just be class="button-cart", we could have broken it up into three unique class selectors, such as class="color-primary font-secondary font-size-large". In our CSS file, we'd then have a class selector statement for each of these, such as .color-primary {color:yellow} and .font-size-large {font-size:36px}. We could then use and re-use these classes throughout the file and throughout our website. If we change our mind about what the best primary color shoudl be, all we'd only need to change this one line and it would update EVERY element which used that class. For large and complex websites, the increased flexibility and efficiency that class selectors enables makess them far superior to IDs.
+      </p>
+      <p>
+        Questions or comments? Still can't make the on the blog itself, so please drop them in <a href="https://github.com/bbensch09/bbensch09.github.io/tree/master/blog"> GitHub </a> or Canvas!
+      </p>
   </div>
-    </section>
+    </article>
        <div class="push"> </div>
   </div>
     <footer class="cl-b">
