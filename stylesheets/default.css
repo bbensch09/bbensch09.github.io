@@ -2,7 +2,8 @@
 @bbcs-accent:cc0000;*/
 
 /*---CORE ELEMENT TYPES---*/
-a {color:white; text-decoration: none; }
+a {color:blue; text-decoration: none; }
+nav a {color:white;}
 a:hover {color:#3a3b39;}
 p {padding: 2px 2px 2px 2px;}
 /*---COLORS & BACKGROUND---*/
@@ -112,6 +113,21 @@ p {padding: 2px 2px 2px 2px;}
     border: 2px solid #666;
     text-decoration:none;
   }
+.css-images {
+  width: 20em;
+  height: 14em;
+  position: relative;
+}
+
+p {
+font-size: 1.2em;
+display:block;
+}
+.blog-section {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
 nav ul li {
   display: inline;
   font-size: 1.5em;
@@ -157,7 +173,7 @@ footer {
     height:1em;
   }
   footer a {
-    color: #fffff;
+    color: #ffffff;
     font-size: 1em;
   }
   footer a:hover {
