@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title> Arrays vs. Hashes </title>
+  </head>
+
+<body>
+    <div class="wrapper">
+    <header class="header bgc-2 op-8 ov-a">
+      <img src="../imgs/logo-oct7.png" alt="logo" class="fl-l img-m op-8 pl-1"/>
+      <h1 class="ta-c c-1 va-m fz-xxl"> Blogging from the Bensch </h1>
+      </header>
+      <section class="col-12 ta-c bgc-3 m-0">
+        <p class="m-0 fz-xl"> Explained: Arrays vs. Hashes </p>
+          <p class="m-0 fz-lg"> October 14th, 2015   </p>
+      </section>
+      <nav class="nav cl-b ">
+        <ul class="m-a ta-c bgc-3">
+            <li> <a href="../index.html" > Home </a> </li>
+            <li> <a href="../blog/index.html" > View Blog </a> </li>
+            <li> <a href="../projects/index.html" > Active Projects </a> </li>
+            <li> <a href="https://github.com/bbensch09" > My GitHub </a> </li>
+            <li> <a href="../blog/about-me.html" > About Me </a> </li>
+        </ul>
+      </nav>
+    <article>
+      <div class="blog-section">
+        <p>
+          In this week’s DevBootcamp content, we focused primarily on manipulating data using arrays, before briefly reviewing hashes. An array is simply a collection of indexed objects. Those objections can be integers, strings, or even other objects. To access any of the objects in an array, you simply use its index number. Index numbers start at zero, and so the first element of an array is retrieved by using array[0], the second element would be array[1], etc. In the example below, we define an array called array_alphabet of alphabet letters, and use the index numbers to return the letters “d”, “b”, and “c”.
+        </p>
+<pre> <code class="ruby" style="font-size:1.2em">
+  array_alphabet = [‘a’,’b’,’c’,’d’,’e’,’f’,’g’]
+  array_alphabet[3]
+  => "d"
+  array_alphabet[1]
+  => "b"
+  array_alphabet[2]
+  => "c"
+  array_alphabet.values_at(3,2,1)
+  => ["d","b","c"]
+</code> </pre>
+        <p> Arrays are incredibly powerful, and can get far more complex when we nest additional arrays inside the, and want to run complex math functions against their contents. But for the most part, as long as you understand the indexing system used by arrays, you should be able to use them.
+        </p>
+        <p>
+          So what exactly is a hash then? A hash is very very similar to an array. The only difference is that a hash can have any type of object used as its indexing key. With arrays, our index key are always integers starting zero. Hashes, on the other hand, can take any object (string or integer or float) as its key values. This makes them slightly less efficient from a compute time point of view, but much more flexible. Instead of having to assign your first element to the [0] index position, you can give it a semantically meaningful name, such as “first_name”. Hashes can still use the integer-based indexing if they want, but you would generally use an array in that case, since it would be more efficient. For example, if we want to store data about NHL players, we’ll likely want to be able to retrieve that data based on factors like team, position, etc. And so building an array of NHL players wouldn’t be sufficient. Instead, we’d want to build a hash. The simple hash below creates a new hash called player_info, for the Sharks’ captain Joe Pavelski. We then retrive the player's age using hash notation.
+        </p>
+<pre> <code class="ruby" style="font-size:1.2em">
+  player_info = {
+  name: ‘Joe Pavelski’,
+  number: 8,
+  height: ‘5”11’,
+  weight: 190,
+  goals: 2,
+  assists: 3,
+  team: ‘San Jose Sharks’,
+  age: 31
+  }
+
+  player_info['age']
+  => 31
+  </code> </pre>
+      <p>
+        In a nutshell, that hopefully explains the differences between hashes and arrays. Have questions or comments? Still can't make the on the blog itself, so please drop them in <a href="https://github.com/bbensch09/bbensch09.github.io/tree/master/blog"> GitHub </a> or Canvas!
+      </p>
+  </div>
+    </article>
+       <div class="push"> </div>
+  </div>
+    <footer class="cl-b">
+      <ul>
+        <li> <a href="https://www.linkedin.com/in/brianbensch" > Connect on LinkedIn </a>
+          <img src="../imgs/twitter-logo.png" alt="twitter-logo"/> </li>
+        <li> <a href="https://www.facebook.com/bbensch" > Friend me on Facebook </a>
+          <img src="../imgs/facebook-logo.png" alt="facebook-logo"/>  </li>
+        <li> <a href="https://twitter.com/bbensch" > Follow me on Twitter </a>
+          <img src="../imgs/linkedin-logo.gif" alt="linkedin-logo"/>  </li>
+      </ul>
+    </footer>
+
+  </body>
+
+</html>
