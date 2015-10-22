@@ -6,6 +6,8 @@ a {color:blue; text-decoration: none; }
 nav a {color:white;}
 a:hover {color:#3a3b39;}
 p {padding: 2px 2px 2px 2px;}
+h1 {font-size: 1.7em}
+h2 {font-size: 1.2em}
 /*---COLORS & BACKGROUND---*/
 .bgc-2{background-color: #3a3b39;}
 .bgc-1{background-color: #cc0000;}
@@ -126,7 +128,7 @@ display:block;
 .blog-section {
   margin: auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 nav ul li {
   display: inline;
