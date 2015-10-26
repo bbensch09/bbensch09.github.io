@@ -181,3 +181,11 @@ footer {
   footer a:hover {
     color: #bfb8b8;
   }
+  .contact-type {width:100px;
+    font-weight: bold;
+    text-align: left;
+    display:inline-block;
+    clear:both;}
+  .contact-item {
+    display:inline;
+  }
