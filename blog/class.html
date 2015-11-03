@@ -7,7 +7,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-    <title> Arrays vs. Hashes </title>
+    <title> It's time for Class! </title>
   </head>
 
 <body>
@@ -17,8 +17,8 @@
       <h1 class="ta-c c-1 va-m fz-xxl"> Blogging from the Bensch </h1>
       </header>
       <section class="col-12 ta-c bgc-3 m-0">
-        <p class="m-0 fz-xl"> What's an Enumerable? How do I use this #Map? </p>
-          <p class="m-0 fz-lg"> October 28th, 2015   </p>
+        <p class="m-0 fz-xl"> It's time for Class! </p>
+          <p class="m-0 fz-lg"> November 3rd, 2015   </p>
       </section>
       <nav class="nav cl-b ">
         <ul class="m-a ta-c bgc-3">
@@ -31,52 +31,78 @@
       </nav>
     <article>
       <div class="blog-section">
-        <img src="../imgs/map-enumerable.jpg" class="css-images" align="right" alt="enumerable#map image" />
+        <img src="../imgs/keep-calm-class.png" class="" align="right" alt="class image" />
         <p>
-          In this week’s DevBootcamp content, we explored more complex methods in Ruby, solving some fun challenges including how to create dice with infinite sides, how to calculate the mode, and so much more! We also began (without realizing it) to use a certain types of methods called enumerable methods. What exactly is an enumerable method?
+          This week in Dev Bootcamp was our 3rd week diving deeper and deeper into Ruby. In today’s post, I’m going to attempt to explain the concept of classes, and why they are incredibly useful in any object-oriented programming language (i.e. pretty much all modern programming languages).
         </p>
-        <p> An "enumerable" is basically a collection of methods that are packaged together so that they can be mixed in with other methods that belong to a class. Also known as a "mixin", enumerable methods allow Ruby developers to bypass re-writing a bunch of new code when they want to create a new method within a class. Most of the popular and commonly used enumerables make use of the #each method (which is itself an enumerable that enables iteration), and allow you to iterate through a hash or array without having to explicitly call the #each method directly.
+        <p>
+          So what exactly is a class? A class is basically a blueprint from which individual objects are created. In real-world terms, we might consider class to be a representation of identity. All humans have two legs, two hands, and walk upright. These characteristics could be used to define the class of objects known as Human, and that you and I are each instances of that class.
         </p>
-        <p> For example, let's dive into the #map enumerable method for the remainder of this blog post. When #map is called on an array or hash, it is implicitly going to apply the each method for iteration, and allows you to define a set of modifications to make to each element or key-value pair in your array or hash. The example below takes a simple array of the numbers 1 thru 5, and <em> modifies </em> them by adding 10 to each element.
+        <p>
+          A given object can have more than one class, because classes can be inherited in a fairly logical manner. Men could be defined as a child class of Human, since all men are humans, but clearly they have some distinct features that not all humans share. Likewise, Mammals could be the parent class of Human, since all humans are mammals. Let us now look at some example code to see how we might construct and use a class called Human.
         </p>
-<pre> <code class="ruby" style="font-size:1.2em">
-  array = [1,2,3,4,5]
-  array.map{|x| x + 10}
-= > [11, 12, 13, 14, 15]
-</code> </pre>
-        <p> This may look very similar to the type of result we'd expect to see when calling #each. The core difference is that #map is actually modifying the elements in their existing structure, and returning that structure non-destructively. If we ran the exact same code with #each, we would simply get our original array back. Each doesn't modify our array, it simply allows us to execute a block of code using the elements. If we ran the code but included a #puts call in our block, then we'd get the resulting elements printed out. Note that in both cases, the original structure of the object is maintained.
+        <p>
+          First, let’s determine the attributes and actions we want all objects of the class Human to have. For simplicity, we’ll say that all humans have a name, an age, a height, and a birthday.
         </p>
 <pre> <code class="ruby" style="font-size:1.2em">
-arr.each{|x| x+10}
-=> [1, 2, 3, 4, 5]
-#nothing happens
+class Human
+    attr_accessor :name, :age, :gender, :height, :birthday
 
-arr.each{|x| puts x+10}
-11
-12
-13
-14
-15
-=> [1, 2, 3, 4, 5]
-  </code> </pre>
-      <p> The #map enumerable can also be used to evaluate each element and return the result of your evaluation, as a boolean or conditional assignment. For example, we can use #map to determine which elements are divisible by 3, 5, or both. You may have heard of a childhood (or adult drinking) game called "bizz, buzz". If only you had a better grasp of Ruby at the time you could have made yourself a nice little cheat sheet!
-      </p>
-      <pre> <code class="ruby" style="font-size:1.2em">
-array=(1..20).map do |x|
-  if x % 3 ==0 && x % 5 ==0
-     'bizz-buzz'
-   elsif x % 3 == 0
-     'bizz'
-   elsif x % 5 == 0
-     'buzz'
-   else x
+    def initialize (name,age,gender,height,birthday)
+    @name = name
+    @age = age
+    @gender = gender
+    @height = height
+    @birthday = birthday
+    end
+
+    def name
+        puts "My name is #{@name}."
+    end
+
+    def intelligence
+    puts "Humans can learn anything!"
+    end
+
+    def interests
+    puts "I love Ruby, HTML, and CSS!"
+    end
+
+    def chromosomes
+    puts "I have 23 chromosomes."
+    end
+
   end
-end
-=> [1, 2, "bizz", 4, "buzz", "bizz", 7, 8, "bizz", "buzz", 11, "bizz", 13, 14, "bizz-buzz", 16, 17, "bizz", 19, "buzz"]
-  </code> </pre>
+</code> </pre>
+
+<p> Now that we’ve defined what it means to be Human using this class, we can create instances of Human outside of the class by simply initializing new instances of Human, and passing through the actual values we want to use to describe our humans. In the code below, we create two objects called adam and eve, each of which is an instance of the class Human.
+</p>
+
+<pre> <code class="ruby" style="font-size:1.2em">
+    adam = Human.new("Adam",25,'male',180,'January 1st')
+    eve = Human.new('Eve',25,'female',170,'January 1st')
+</pre> </code>
+
+<p> Even though we’ve literally only written one line of code about adam, we can now call a variety of methods about Adam, since Adam automatically inherits all of the methods of the human class.
+</p>
+
+<pre> <code class="ruby" style="font-size:1.2em">
+    adam.name
+    eve.name
+    adam.intelligence
+    adam.interests
+    eve.chromosomes
+
+    :>  My name is Adam.
+        My name is Eve.
+        Humans can learn anything!
+        I love Ruby, HTML, and CSS!
+        I have 23 chromosomes.
+
+</code> </pre>
 
       <p>
-        In a nutshell, that hopefully gives you a foundational understanding of enumerable methods. Have questions or comments? If so, checkout out my GitHub and please leave your feedback there <a href="https://github.com/bbensch09/bbensch09.github.io/tree/master/blog"> GitHub </a> or Canvas!
+        As you can see, because we went through the effort of creating the class structure, the rest of our code becames far more lightweight and effortless. In a nutshell, that hopefully gives you a foundational understanding of how classes work in Ruby. Have questions or comments? If so, checkout out my GitHub and please leave your feedback there <a href="https://github.com/bbensch09/bbensch09.github.io/tree/master/blog"> GitHub </a> or Canvas!
       </p>
   </div>
     </article>
