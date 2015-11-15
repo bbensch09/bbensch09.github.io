@@ -17,8 +17,8 @@
       <h1 class="ta-c c-1 va-m fz-xxl"> Blogging from the Bensch </h1>
       </header>
       <section class="col-12 ta-c bgc-3 m-0">
-        <p class="m-0 fz-xl"> It's time for Class! </p>
-          <p class="m-0 fz-lg"> November 3rd, 2015   </p>
+        <p class="m-0 fz-xl"> Ruby vs. Javascript! </p>
+          <p class="m-0 fz-lg"> November 14th, 2015   </p>
       </section>
       <nav class="nav cl-b ">
         <ul class="m-a ta-c bgc-3">
@@ -31,15 +31,59 @@
       </nav>
     <article>
       <div class="blog-section">
-        <img src="../imgs/keep-calm-class.png" class="" align="right" alt="class image" />
+        <img src="../imgs/java.jpeg" class="" align="right" alt="class image" />
         <p>
-          This week in Dev Bootcamp
+          This week in Dev Bootcamp (the 7th week of our 9-week phase 0), we took a break from Ruby and began to learn an entirely new programming language, Javascript. While not many people would suggest that it's possible to learn a new language in just a week (and there's clearly still much more to learn), I've been quite suprised at how easy it has been to jump from Ruby to Javascript. It's reminded me a lot about my experience learning Italian in college after spending 4 years learning Spanish in highschool. While the syntax of the languages differs in many respects, the core concepts and grammar rules are almost identical. The same can very much be said of Javascript and Ruby.
         </p>
-<pre> <code class="ruby" style="font-size:1.2em">
-
+        <p>
+          In today's post, we're going to review an example of how similar Javascript and Ruby are, by comparing the core object structure of both languages: Ruby hashes and Javascript objects. As Ruby and Javascript are each considered object-oriented programming languages, it shouldn't be surprising that they both share an object structure at their core. With Ruby, a hash is defined as "a collection of unique keys and their values." With Javascript, according to the Mozilla Developer Network which maintains the current documentation, an object is defined as "a collection of properties, and a property is an association between a name (or key) and a value."
+        </p>
+        <p>
+          With both hashes and Javascript objects, the individual values within the parent object can themselves be objects (including functions or methods), and so it is very easy to end up with a nested structure of child objects within parent objects. Additionally, the syntax for creating objects and hashes is nearly identical.
+        </p>
+        <p> In Ruby we have: </p>
+        <pre> <code class="ruby" style="font-size:1.2em">
+  player_info = {
+  name: ‘Joe Pavelski’,
+  number: 8,
+  height: ‘5”11’,
+  weight: 190,
+  goals: 6,
+  assists: 10,
+  team: ‘San Jose Sharks’,
+  age: 31
+  }
 </code> </pre>
-
-
+<p>In Javascript, the only difference is in the preferred camelCase syntax of the object name:</p>
+<pre> <code class="javascript" style="font-size:1.2em">
+ playerInfo = {
+  name: ‘Joe Pavelski’,
+  number: 8,
+  height: ‘5”11’,
+  weight: 190,
+  goals: 6,
+  assists: 10,
+  team: ‘San Jose Sharks’,
+  age: 31
+  }
+</code> </pre>
+<p> Both languages also offer very easy and similar ways of accessing data within an object. In Ruby, we can return the value for a given key by calling the code below.
+</p>
+<pre> <code class="ruby" style="font-size:1.2em">
+  player_info[:age]
+  => 31
+</code> </pre>
+<p>
+  In Javascript, we can  return the value for a key by either using the nearly identical bracket notation, or by using the slightly simpler and preferred dot-notation, as below.
+</p>
+<pre> <code class="javascript" style="font-size:1.2em">
+  player_info["age"]
+  => 31
+   player_info.age
+  => 31
+</code> </pre>
+<p> As you can see by these similarities, Javascript objects and Ruby hashes have much in common, which learning Javascript far easier for someone who is already familiarity with Ruby and the core concepts of object-oriented programming.
+</p>
   </div>
     </article>
        <div class="push"> </div>
