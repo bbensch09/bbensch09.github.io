@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title> Ruby vs. Javascript </title>
+  </head>
+
+<body>
+    <div class="wrapper">
+    <header class="header bgc-2 op-8 ov-a">
+      <img src="../imgs/logo-oct7.png" alt="logo" class="fl-l img-m op-8 pl-1"/>
+      <h1 class="ta-c c-1 va-m fz-xxl"> Blogging from the Bensch </h1>
+      </header>
+      <section class="col-12 ta-c bgc-3 m-0">
+        <p class="m-0 fz-xl"> Ruby vs. Javascript! </p>
+          <p class="m-0 fz-lg"> November 14th, 2015   </p>
+      </section>
+      <nav class="nav cl-b ">
+        <ul class="m-a ta-c bgc-3">
+            <li> <a href="../index.html" > Home </a> </li>
+            <li> <a href="../blog/index.html" > View Blog </a> </li>
+            <li> <a href="../projects/index.html" > My Projects </a> </li>
+            <li> <a href="https://github.com/bbensch09" > My GitHub </a> </li>
+            <li> <a href="../blog/about-me.html" > Contact Me </a> </li>
+        </ul>
+      </nav>
+    <article>
+      <div class="blog-section">
+        <img src="../imgs/java.jpeg" class="" align="right" alt="class image" />
+        <p>
+          While the majority of our time in Phase 0 was focused on learning how to write methods and solve quantitative challenges using the Ruby programming language, a core focus of our DBC immersion experience (at least as far as I know) will be spent using the web application framework known as Ruby on Rails, or more simply, Rails. Rails is an open-source web application framework originally designed by David Heinemeier Hansson in 2004. What exactly is a web application framework? For starters, we must consider what a web application is.
+        </p>
+        <p>
+          In a nutshell, all of the websites and webpages we’ve built in Dev Bootcamp so far have consisted purely of static collection of linked pages. While we may have used CSS and to make hover actions seem animated and pretty, behind the scenes these websites are simply a collection of hard-coded web page files with links between them. Web applications, unlike static websites, combine HTML structure (and CSS styling) with a backend programming structure that the developer builds by writing a series of methods, database schemas, and configurations dicating how users can view, create, and edit objects in the application. Web applications are inherently dynamic, as they allow actual users to modify the website experience (generally by creating or modifying content) directly, without requiring a site administrator to review and publish changes. Pretty much all websites we use on a regular basis, such as Facebook, Twitter, Google, and Youtube, are all actually web applications, and allow users to generate and retrive content dynamically.
+        </p>
+        <p>
+          As a web application framework, Rails is essentially a packaged set of scripts that allows a web developer to create the core operational foundation of a web application by running a few simple commands. Just like creating a new file in Excel takes seconds, and automatically loads a workbook with three tabs, hundreds of calculation methods/functions, and a GUI for the user to interact with, creating a new Rails app generates a directory of files and folders that represent the core elements of any web application. The Rails structure follows the idea of a model-view-controller framework. In this framework, the model refers to an object-oriented relational database model, whereby you have database tables (SQL or Postgres-SQL) which store data governed by the class structure for their object. Most appications, for example, will have an object class of User, which corresponds to the table of users. Likewise, a blog application may have an object class of Post, which governs that attributes of the table posts. The view refers to the serious of HTML views which a user will see and interact with. Keep in mind that the content in a view is rarely hard-coded; instead it generally represents dynamic variables which are replaced with data from the database model. Finally, the controller is more or less the brains of the application, and where the developer will write most of their methods to govern what user actions can be taken, and what type of data to retrieve and pass through to a given view when that action is performed.
+        </p>
+        <p>
+          Ruby on Rails is well known for it’s insistence and adherence to two programming principles. First, as with Ruby the programming language, Rails is DRY. DRY stands for Don’t Repeat Yourself, and means that a developer should never waste time copy/pasting the same set of code to do similar things. Second, Rails emphasizes Convention over Configuration (CoC), meaning that only when a developer wants to deviate from convention, should he be required to write a new line of code. Accordingly, it is very easy in Rails to get up and running, becuase so much of the convention is pre-written into easily executable packages. While Rails is by no means the only web application framework, it is one of the most widely used. In fact, one estimate from 2014 suggests that more than 600,000 web sites are running Ruby on Rails, forming the backbone of popular sites like Airbnb, GitHub, and Hulu.
+        </p>
+        <p>
+          To be honest, when I first began Phase 0 nine weeks ago, I remember telling friends that I would be learning Ruby on Rails, and I didn’t really know how to explain much more beyond that. I’d even read the Wikipedia article on Rails 2-3 times to try to understand, but most of it went right over my head. It wasn’t until I created a basic Rails app during Phase 0 (by following the Getting Started Guide on RubyOnRails.org) that I finally began to grasp what Rails actually is, and why it’s so powerful. Knowing that I’ve still barely scratched the surface, I’m excited to really start to unlease the power of Rails and become a true Rails developer in the coming weeks.
+        </p>
+  </div>
+    </article>
+       <div class="push"> </div>
+  </div>
+    <footer class="cl-b">
+      <ul>
+        <li> <a href="https://www.linkedin.com/in/brianbensch" > Connect on LinkedIn </a>
+          <img src="../imgs/twitter-logo.png" alt="twitter-logo"/> </li>
+        <li> <a href="https://www.facebook.com/bbensch" > Friend me on Facebook </a>
+          <img src="../imgs/facebook-logo.png" alt="facebook-logo"/>  </li>
+        <li> <a href="https://twitter.com/bbensch" > Follow me on Twitter </a>
+          <img src="../imgs/linkedin-logo.gif" alt="linkedin-logo"/>  </li>
+      </ul>
+    </footer>
+
+  </body>
+
+</html>
