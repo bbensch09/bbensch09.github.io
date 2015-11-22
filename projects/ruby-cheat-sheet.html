@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title> Ruby Cheat Sheet </title>
+  </head>
+
+<body>
+    <div class="wrapper">
+    <header class="header bgc-2 op-8 ov-a">
+      <img src="../imgs/logo-oct7.png" alt="logo" class="fl-l img-m op-8 pl-1"/>
+      <h1 class="ta-c c-1 va-m fz-xxl"> Phase 0 Projects </h1>
+      </header>
+      <section class="col-12 ta-c bgc-3 m-0">
+        <p class="m-0 fz-xl"> Ruby Cheat Sheet </p>
+          <p class="m-0 fz-lg"> November 22nd, 2015   </p>
+      </section>
+      <nav class="nav cl-b ">
+        <ul class="m-a ta-c bgc-3">
+            <li> <a href="../index.html" > Home </a> </li>
+            <li> <a href="../blog/index.html" > View Blog </a> </li>
+            <li> <a href="../projects/index.html" > My Projects </a> </li>
+            <li> <a href="https://github.com/bbensch09" > My GitHub </a> </li>
+            <li> <a href="../blog/about-me.html" > Contact Me </a> </li>
+        </ul>
+      </nav>
+    <article>
+      <div class="blog-section">
+        <img src="../imgs/ruby.jpeg" class="" align="right" alt="class image" />
+        <p>
+          As one of my final Phase 0 challenges, I've created a cheat sheet of commonly used methods in Ruby. All of the source data for these method can originally be found from the <a href="http://ruby-doc.org/core-2.2.3/Array.html" >Ruby Docs </a>, but rather than sorting a huge list alphabetically, I've categorized the most useful methods I'll likely need to refer to throughout the onsite immersion.
+        </p>
+        <!-- Methods index -->
+        <section id="methodsIndex" class="row section__boxed">
+
+          <h3 class="section--head footroom-half">Array Methods Index</h3>
+            <ul class="index">
+              <li><a href="#each" title="#each">#each</a></li>
+              <li><a href="#eachSlice" title="#each_slice">#each_slice</a></li>
+              <li><a href="#map" title="#map">#map</a></li>
+              <li><a href="#length" title="#length">#length</a></li>
+              <li><a href="#include" title="#include?">#include?</a></li>
+              <li><a href="#index" title="#index">#index</a></li>
+              <li><a href="#valuesAt" title="#valuesAt">#valuesAt</a></li>
+              <li><a href="#first" title="#first">#first</a></li>
+              <li><a href="#last" title="#last">#last</a></li>
+              <li><a href="#select" title="#select">#select</a></li>
+              <li><a href="#reduce" title="#reduce">#reduce</a></li>
+              <li><a href="#join" title="#join">#join</a></li>
+              <li><a href="#insert" title="#insert">#insert</a></li>
+              <li><a href="#replace" title="#replace">#replace</a></li>
+              <li><a href="#sort" title="#sort">#sort</a></li>
+              <li><a href="#shuffle" title="#shuffle">#shuffle</a></li>
+              <li><a href="#reverse" title="#reverse">#reverse</a></li>
+            </ul>
+        </section><!-- /Methods index -->
+        <section class="cheatSheet">
+        <h2 id="each"> #each </h2>
+        <p> Calls the given block once for each element in self, passing that element as a parameter.
+        </p>
+        <pre> <code class="ruby" style="font-size:1.2em">
+          a = [ "a", "b", "c" ]
+          a.each {|x| puts x + " - test " }
+          =>  a - test
+              b - test
+              c - test
+        </code> </pre>
+
+                <h2 id="eachSlice"> #eachSlice </h2>
+        <p> Calls the given block once for each element in self, passing that element as a parameter.
+        </p>
+        <pre> <code class="ruby" style="font-size:1.2em">
+          a = [ "a", "b", "c" ]
+          a.each {|x| puts x + " - test " }
+          =>  a - test
+              b - test
+              c - test
+        </code> </pre>
+      </section>
+
+    </div>
+    </article>
+       <div class="push"> </div>
+  </div>
+    <footer class="cl-b">
+      <ul>
+        <li> <a href="https://www.linkedin.com/in/brianbensch" > Connect on LinkedIn </a>
+          <img src="../imgs/twitter-logo.png" alt="twitter-logo"/> </li>
+        <li> <a href="https://www.facebook.com/bbensch" > Friend me on Facebook </a>
+          <img src="../imgs/facebook-logo.png" alt="facebook-logo"/>  </li>
+        <li> <a href="https://twitter.com/bbensch" > Follow me on Twitter </a>
+          <img src="../imgs/linkedin-logo.gif" alt="linkedin-logo"/>  </li>
+      </ul>
+    </footer>
+
+  </body>
+
+</html>
