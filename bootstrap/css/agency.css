@@ -872,6 +872,6 @@ body {
     width: 35%;
     margin: auto;
 }
-a:visited {
+.read-more {
     color: white;
 }
